@@ -1,0 +1,31 @@
+.main_menu {
+  background-color: #7faed7;
+  width: 40em;
+  height: 4em;
+  margin: 30px auto 30px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.main_menu_input {
+  flex-grow: 2;
+  width: 32em;
+  height: 4em;
+  margin: 0 4em 0 2em;
+  padding-left: 1em;
+  outline: none;
+  border: hidden;
+  border-radius: 5px;
+}
+
+.main_menu_button {
+  flex-grow: 1;
+  width: 8em;
+  height: 4em;
+  border: hidden;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #1f1187;
+}
