@@ -5,11 +5,9 @@ import PropTypes from 'prop-types'
 import  './index.scss'
 
 const ToDoMainMenu = ({ addToDoToArray }) => {
-	let [userString, setUserString] = useState('');
+	const [userString, setUserString] = useState('');
 
-	const inputHandler = (e) => {
-		setUserString(e.currentTarget.value);
-	};
+	const inputHandler = e => setUserString(e.currentTarget.value);
 
 	const submitHandler = (e) => {
 		e.preventDefault();
