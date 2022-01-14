@@ -1,0 +1,31 @@
+.update_menu {
+  background-color: #c2f4cc;
+  width: 43em;
+  height: 3em;
+  margin: 0 auto 0;
+  padding: 9px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+
+.update_menu_input {
+  flex-grow: 2;
+  width: 34em;
+  height: 3em;
+  margin: 0 5em 0 3em;
+  padding-left: 1em;
+  outline: none;
+  border: hidden;
+  border-radius: 5px;
+}
+
+.update_menu_button {
+  flex-grow: 1;
+  width: 6em;
+  height: 3em;
+  border: hidden;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: #00a51e;
+}
