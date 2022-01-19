@@ -26,22 +26,23 @@ const ToDoItem = ({ item, removeItem, updateItem }) => {
 		return <UpdateMenu updateHandler={updateHandler} update={update.value} />
 	}
 
-	// unfinished hash searching
 
-	// const findHash = () => {
-	// 	const hash = item.value.match(/#\w+/gm).toString().replaceAll('#', '');
-	// 	return hash;
-	// }
+	// strArr.map(el => el.match(/#\w+/gm) ? result.push(el.toString().toUpperCase()) : result.push(el));
+
 
 	return (
 		<>
 			<div className='item_container'>
-						<p
+						<span
 							key={item.id}
 							className='item_text'
 						>
-							{item.value}
-						</p>
+							{item.value.split(' ').map(el =>
+								el.match(/#[a-z,A-Z,А-Я,а-я]+/gmu) ?
+									<span className='hash' key={item.id + Math.random()}>{el}</span> :
+									<span className='usual-text' key={item.id + Math.random()}>{el}</span>
+							)}
+						</span>
 					<div className='item_button_container'>
 						<button
 							className='item_update_button'

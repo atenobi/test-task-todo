@@ -15,7 +15,7 @@
   font-size: 20px;
   width: 65%;
   height: max-content;
-  word-break: break-word;
+  word-break: break-all;
   padding: 10px;
   margin: 5px;
 }
@@ -45,15 +45,18 @@
   color: #ffffff;
   background-color: #e37474;
 }
-// unfinished hash searching
-//.hash {
-//  font-size: 20px;
-//  background-color: #f3afaf;
-//  width: 15%;
-//  height: max-content;
-//  word-break: break-word;
-//  border-radius: 5px;
-//  margin: 5px;
-//  padding: 10px;
-//  margin: 5px;
-//}
+
+//unfinished hash searching
+.usual-text {
+  font-size: 20px;
+  background-color: #ffffff;
+  margin: 5px;
+}
+
+.hash {
+  font-size: 20px;
+  background-color: #ffabab70;
+  border-radius: 5px;
+  margin: 5px;
+}
+
