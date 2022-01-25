@@ -23,9 +23,11 @@ const UpdateMenu = ({ updateHandler, update }) => {
 	return (
 		<>
 			<div className="update_menu">
-				<form action={"update_to_do"}
-				      onSubmit={submitHandler}
-				      onKeyDown={enterKeyHandler}
+				<form
+					className='update_menu_form'
+					action={"update_to_do"}
+					onSubmit={submitHandler}
+					onKeyDown={enterKeyHandler}
 				>
 					<input
 						className='update_menu_input'

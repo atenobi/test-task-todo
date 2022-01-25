@@ -25,6 +25,7 @@ const ToDoMainMenu = ({ addToDoToArray }) => {
 		<>
 			<div className="main_menu">
 				<form action={"create_to_do"}
+				      className='main_menu_form'
 				onSubmit={submitHandler}
 				onKeyDown={enterKeyHandler}
 				>
@@ -40,7 +41,7 @@ const ToDoMainMenu = ({ addToDoToArray }) => {
 						className='main_menu_button'
 						type='submit'
 					>
-						Create to-do
+						Create
 					</button>
 				</form>
 			</div>

@@ -32,7 +32,6 @@ function App() {
     setToDoArr([...toDoArr.filter((el) => el.id !== id)]);
   };
 
-
   return (
     <div className="App">
       <ToDoCounter toDoCount={toDoArr.length} />
