@@ -1,31 +1,51 @@
 .main_menu {
   background-color: #7faed7;
-  width: 40em;
-  height: 4em;
+  width: 90%;
+  height: 5rem;
   margin: 30px auto 30px;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   border-radius: 5px;
 }
 
+.main_menu_form {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+  }
+}
+
 .main_menu_input {
-  flex-grow: 2;
-  width: 32em;
-  height: 4em;
-  margin: 0 4em 0 2em;
+  width: 70%;
+  height: 4rem;
+  margin: 0;
   padding-left: 1em;
   outline: none;
   border: hidden;
   border-radius: 5px;
+  font-size: 20px;
+  font-family: cursive;
+  @media only screen and (max-width: 480px) {
+    font-size: 15px;
+  }
 }
 
 .main_menu_button {
-  flex-grow: 1;
-  width: 8em;
-  height: 4em;
+  width: 15%;
+  height: 4rem;
   border: hidden;
   border-radius: 5px;
   color: #ffffff;
   background-color: #1f1187;
+  font-size: 20px;
+  font-family: cursive;
+  @media only screen and (max-width: 480px) {
+    margin: 5px;
+    width: 30%;
+    font-size: 15px;
+  }
 }

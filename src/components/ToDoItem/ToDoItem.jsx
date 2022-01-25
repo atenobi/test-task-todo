@@ -26,10 +26,6 @@ const ToDoItem = ({ item, removeItem, updateItem }) => {
 		return <UpdateMenu updateHandler={updateHandler} update={update.value} />
 	}
 
-
-	// strArr.map(el => el.match(/#\w+/gm) ? result.push(el.toString().toUpperCase()) : result.push(el));
-
-
 	return (
 		<>
 			<div className='item_container'>
