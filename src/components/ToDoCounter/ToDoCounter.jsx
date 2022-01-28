@@ -6,9 +6,9 @@ import './index.scss';
 
 const ToDoCounter = ({ toDoCount }) => (
 		<div className='counter_container'>
-			<p className='counter_text'>
+			<h1 className='counter_text'>
 				You have {toDoCount} cases!
-			</p>
+			</h1>
 		</div>
 )
 
