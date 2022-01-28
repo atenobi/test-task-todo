@@ -24,7 +24,8 @@ const ToDoFooter = ({infoArray}) => {
 						className='footer_button'
 						onClick={(e) => showInfo(e)}
 					>
-						hide
+						&#10006;
+						{/*hide*/}
 					</button>
 				</div>
 			</>
@@ -40,7 +41,8 @@ const ToDoFooter = ({infoArray}) => {
 					className='footer_button'
 					onClick={(e) => showInfo(e)}
 				>
-					<i className="fa fa-info"/>
+					&#8505;
+					{/*<i className="fa fa-info"/>*/}
 				</button>
 			</div>
 		</>
