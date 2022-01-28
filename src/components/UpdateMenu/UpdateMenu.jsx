@@ -39,7 +39,8 @@ const UpdateMenu = ({ updateHandler, update }) => {
 						className='update_menu_button'
 						type='submit'
 					>
-						<i className="fa fa-save" />
+						&#10004;
+						{/*<i className="fa fa-save" />*/}
 					</button>
 				</form>
 			</div>
