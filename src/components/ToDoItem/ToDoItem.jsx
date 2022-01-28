@@ -46,13 +46,15 @@ const ToDoItem = ({ item, removeItem, updateItem }) => {
 							className='item_update_button'
 							onClick={() => setUpdate({ id: item.id, value: item.value })}
 						>
-							<i className='fas fa-pencil-alt'/>
+							&#9998;
+							{/*<i className='fas fa-pencil-alt'/>*/}
 						</button>
 						<button
 							className='item_delete_button'
 							onClick={() => removeItem(item.id)}
 						>
-							<i className='fas fa-trash-alt' />
+							&#9851;
+							{/*<i className='fas fa-trash-alt' />*/}
 						</button>
 					</div>
 			</div>
