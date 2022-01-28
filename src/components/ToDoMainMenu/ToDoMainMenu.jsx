@@ -24,17 +24,17 @@ const ToDoMainMenu = ({ addToDoToArray }) => {
 	return (
 		<>
 			<div className="main_menu">
-				<form action={"create_to_do"}
-				      className='main_menu_form'
-				onSubmit={submitHandler}
-				onKeyDown={enterKeyHandler}
+				<form
+					action={"create_to_do"}
+					className='main_menu_form'
+					onSubmit={submitHandler}
+					onKeyDown={enterKeyHandler}
 				>
-					<input
+					<textarea
 						className='main_menu_input'
 						value={userString}
-						type="text"
 						aria-multiline={true}
-						placeholder='Write to-do here'
+						placeholder='Write task here'
 						onInput={inputHandler}
 					/>
 					<button

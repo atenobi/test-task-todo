@@ -29,19 +29,17 @@ const UpdateMenu = ({ updateHandler, update }) => {
 					onSubmit={submitHandler}
 					onKeyDown={enterKeyHandler}
 				>
-					<input
+					<textarea
 						className='update_menu_input'
-						value={userString}
-						type="text"
-						aria-multiline={true}
-						placeholder='Update to-do'
+						value={ userString }
+						// aria-multiline={true}
 						onInput={inputHandler}
 					/>
 					<button
 						className='update_menu_button'
 						type='submit'
 					>
-						Update
+						<i className="fa fa-save" />
 					</button>
 				</form>
 			</div>

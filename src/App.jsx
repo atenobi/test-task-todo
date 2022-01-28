@@ -1,13 +1,22 @@
 import React, { useState }  from "react";
-import './App.css';
+import './index.css';
 
 // components
 import ToDoCounter from "./components/ToDoCounter/ToDoCounter";
 import ToDoMainMenu from "./components/ToDoMainMenu/ToDoMainMenu";
 import ToDoItem from "./components/ToDoItem/ToDoItem";
+import ToDoFooter from "./components/ToDoFooter/ToDoFooter";
 
 function App() {
   const [toDoArr, setToDoArr] = useState([]);
+
+  const infoArray = [
+    'Небольшой тестовый проект на React JS.',
+    'Поэксперименторовал с дизайном. Стремился к простому, интуитивно понятному интерфейсу' +
+    '(как мне кажется - получилось весело).',
+    'Приложение адаптируется под мобильные устройства.',
+    'Удобно добавлять, редактировать, удалять заметки.',
+  ];
 
   const addToDoToArray = (userInput) => {
     if (userInput) {
@@ -45,6 +54,7 @@ function App() {
           />
         ))
       }
+      <ToDoFooter infoArray={infoArray} />
     </div>
   );
 }
