@@ -4,6 +4,7 @@ import './index.css';
 // components
 import ToDoCounter from "./components/ToDoCounter/ToDoCounter";
 import ToDoMainMenu from "./components/ToDoMainMenu/ToDoMainMenu";
+import ToDoSearchMenu from "./components/ToDoSearchMenu/ToDoSearchMenu";
 import ToDoItem from "./components/ToDoItem/ToDoItem";
 import ToDoFooter from "./components/ToDoFooter/ToDoFooter";
 
@@ -48,6 +49,7 @@ function App() {
     <div className="App">
       <ToDoCounter toDoCount={toDoArr.length} />
       <ToDoMainMenu addToDoToArray={addToDoToArray} />
+      <ToDoSearchMenu toDoArr={toDoArr} />
       {toDoArr.length > 0 && toDoArr.map((el) => (
           <ToDoItem
             key={el.id}
