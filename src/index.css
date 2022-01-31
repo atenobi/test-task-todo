@@ -25,7 +25,18 @@ code {
   background-image: url("../src/assets/todo-listl-background.jpg");
 }
 
+.searching_result_container {
+  width: 65%;
+  background-color: #79e68f99;
+  text-align: -webkit-center;
+}
 
-
+.searching_result_text {
+  width: 100%;
+  font-size: 22px;
+  text-align: center;
+  font-family: Roboto, Sans-Serif;
+  color: #1f1187;
+}
 
 

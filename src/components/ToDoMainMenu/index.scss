@@ -28,7 +28,7 @@
   border: hidden;
   border-radius: 5px;
   font-size: 20px;
-  font-family: cursive;
+  font-family: Roboto, Sans-Serif;
   @media only screen and (max-width: 480px) {
     width: 85%;
     font-size: 15px;
@@ -44,7 +44,7 @@
   color: #ffffff;
   background-color: #1f1187a3;
   font-size: 20px;
-  font-family: cursive;
+  font-family: Roboto, Sans-Serif;
   &:hover {
     cursor: cell;
     background-color: #12085b;
