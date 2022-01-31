@@ -1,10 +1,12 @@
 import React, {useState} from "react";
-import PropTypes from "prop-types";
+
+// data
+import { infoArray } from "../../constants/infoArray";
 
 // style
 import './index.scss';
 
-const ToDoFooter = ({infoArray}) => {
+const ToDoFooter = () => {
 	const [infoStatus, setInfoStatus] = useState(false);
 
 	const showInfo = (e) => {
@@ -25,7 +27,7 @@ const ToDoFooter = ({infoArray}) => {
 						onClick={(e) => showInfo(e)}
 					>
 						&#10006;
-						{/*hide*/}
+						{/* close (cross) */}
 					</button>
 				</div>
 			</>
@@ -42,15 +44,11 @@ const ToDoFooter = ({infoArray}) => {
 					onClick={(e) => showInfo(e)}
 				>
 					&#8505;
-					{/*<i className="fa fa-info"/>*/}
+					{/* info (i) */}
 				</button>
 			</div>
 		</>
 	)
 };
-
-ToDoFooter.propTypes = {
-	infoArray: PropTypes.array.isRequired,
-}
 
 export default ToDoFooter;

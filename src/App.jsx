@@ -1,5 +1,4 @@
 import React, { useState }  from "react";
-import './index.css';
 
 // components
 import ToDoCounter from "./components/ToDoCounter/ToDoCounter";
@@ -8,19 +7,12 @@ import ToDoSearchMenu from "./components/ToDoSearchMenu/ToDoSearchMenu";
 import ToDoItem from "./components/ToDoItem/ToDoItem";
 import ToDoFooter from "./components/ToDoFooter/ToDoFooter";
 
+// style
+import './index.css';
+
 function App() {
   const [toDoArr, setToDoArr] = useState([]);
-
-  const infoArray = [
-    'Блокнот (To-Do list).',
-    'Небольшой тестовый проект на React JS.',
-    'Дизайн разрабатываю сам.',
-    'Стремился к простому, интуитивно понятному интерфейсу',
-    '(как мне кажется - получилось весело).',
-    'Приложение адаптируется под мобильные устройства.',
-    'Удобно добавлять, редактировать, удалять заметки.',
-    'https://atenobi.github.io/test-task-todo/',
-  ];
+  const [findedItems, setFindedItems] = useState([]);
 
   const addToDoToArray = (userInput) => {
     if (userInput) {
@@ -38,6 +30,7 @@ function App() {
   const updateItem = (toDo, newValue) => {
     const updatedEl = toDoArr.find(el => el.id === toDo.id)
     updatedEl.change(newValue);
+    setFindedItems([]);
     return updatedEl;
   };
 
@@ -49,7 +42,24 @@ function App() {
     <div className="App">
       <ToDoCounter toDoCount={toDoArr.length} />
       <ToDoMainMenu addToDoToArray={addToDoToArray} />
-      <ToDoSearchMenu toDoArr={toDoArr} />
+      <ToDoSearchMenu
+        toDoArr={toDoArr}
+        setFindedItems={setFindedItems}
+      />
+
+      {findedItems.length > 0 && findedItems.map((el) => (
+        <div className="searching_result_container">
+          <h4 className="searching_result_text">Found</h4>
+          <ToDoItem
+            key={el.id}
+            item={el}
+            removeItem={removeItem}
+            updateItem={updateItem}
+          />
+        </div>
+      ))
+      }
+
       {toDoArr.length > 0 && toDoArr.map((el) => (
           <ToDoItem
             key={el.id}
@@ -59,7 +69,7 @@ function App() {
           />
         ))
       }
-      <ToDoFooter infoArray={infoArray} />
+      <ToDoFooter />
     </div>
   );
 }
